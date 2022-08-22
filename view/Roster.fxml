@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RosterController">
+   <children>
+      <Group>
+         <children>
+            <TextField fx:id="number_of_teams_text_box" layoutX="211.0" layoutY="9.0" prefHeight="31.0" prefWidth="34.0" text="9" />
+            <Label layoutX="14.0" layoutY="14.0" text="Number of Teams in League" />
+         </children>
+      </Group>
+      <VBox layoutX="14.0" layoutY="101.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+         <children>
+            <Group>
+               <children>
+                  <Label layoutX="16.0" layoutY="80.0" text="QB Starters" AnchorPane.leftAnchor="5.0" />
+                  <TextField fx:id="qb_starters_text_box" layoutX="155.0" layoutY="75.0" prefHeight="31.0" prefWidth="34.0" text="1" />
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <Label layoutX="10.0" layoutY="111.0" text="RB Starters" AnchorPane.leftAnchor="5.0" />
+                  <TextField fx:id="rb_starters_text_box" layoutX="151.0" layoutY="105.0" prefHeight="31.0" prefWidth="34.0" text="2" />
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <TextField fx:id="wr_starters_text_box" layoutX="155.0" layoutY="137.0" prefHeight="31.0" prefWidth="34.0" text="2" />
+                  <Label layoutX="15.0" layoutY="142.0" text="WR Starters" AnchorPane.leftAnchor="5.0" />
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <TextField fx:id="te_starters_text_box" layoutX="150.0" layoutY="168.0" prefHeight="31.0" prefWidth="34.0" text="1" />
+                  <Label layoutX="11.0" layoutY="173.0" text="TE Starters" AnchorPane.leftAnchor="5.0" />
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <Label layoutX="14.0" layoutY="204.0" text="K Starters" AnchorPane.leftAnchor="5.0" />
+                  <TextField fx:id="k_starters_text_box" layoutX="152.0" layoutY="199.0" prefHeight="31.0" prefWidth="34.0" text="1" />
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <Label layoutX="14.0" layoutY="235.0" text="RB/WR/TE Starters" AnchorPane.leftAnchor="5.0" />
+                  <TextField fx:id="rb_wr_te_starters_text_box" layoutX="152.0" layoutY="230.0" prefHeight="31.0" prefWidth="34.0" text="0" />
+               </children>
+            </Group>
+            <Group layoutY="31.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="235.0" text="WR/TE Starters" AnchorPane.leftAnchor="5.0" />
+                  <TextField fx:id="wr_te_starters_text_box" layoutX="152.0" layoutY="230.0" prefHeight="31.0" prefWidth="34.0" text="1" />
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <Label layoutX="14.0" layoutY="235.0" text="Team Def Starters" />
+                  <TextField fx:id="team_defense_starters_text_box" layoutX="152.0" layoutY="230.0" prefHeight="31.0" prefWidth="34.0" text="1" />
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <Label layoutX="14.0" layoutY="235.0" text="IDP Starters" />
+                  <TextField fx:id="idp_starters_text_box" layoutX="152.0" layoutY="230.0" prefHeight="31.0" prefWidth="34.0" text="1" />
+               </children>
+            </Group>
+         </children>
+      </VBox>
+      <Group layoutY="51.0">
+         <children>
+            <TextField fx:id="roster_size_text_box" layoutX="156.0" layoutY="9.0" prefHeight="31.0" prefWidth="34.0" text="16" />
+            <Label layoutX="14.0" layoutY="14.0" text="Roster Size" />
+         </children>
+      </Group>
+      <Button fx:id="rosterButton" layoutX="286.0" layoutY="216.0" mnemonicParsing="false" onAction="#rosterButtonAction" text="Apply Roster Settings">
+         <tooltip>
+            <Tooltip text="Applies roster settings currently shown in the boxes at the left" />
+         </tooltip></Button>
+      <Button fx:id="DJCRosterButton" layoutX="332.0" layoutY="161.0" mnemonicParsing="false" onAction="#DJCRosterButtonAction" text="DJC" />
+      <Label layoutX="307.0" layoutY="274.0" text="Selected League" />
+      <TextField fx:id="rosterSelectedLeagueTextBox" layoutX="276.0" layoutY="321.0" />
+      <MenuBar layoutX="307.0" layoutY="63.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Roster File">
+            <items>
+                  <MenuItem fx:id="saveRosterSettingsMenuItem" mnemonicParsing="false" onAction="#saveRosterSettingsAction" text="Save Roster Settings" />
+              <MenuItem fx:id="ChooseRosterFileMenuItem" mnemonicParsing="false" onAction="#ChooseRosterFileAction" text="Choose Roster File" />
+            </items>
+          </Menu>
+        </menus>
+         <tooltip>
+            <Tooltip text="Used to select a custom league's roster settings" />
+         </tooltip>
+      </MenuBar>
+      <TextField fx:id="selectedRosterFileTextBox" layoutX="246.0" layoutY="107.0" prefHeight="25.0" prefWidth="209.0" />
+      <Button fx:id="saveRosterFileButton" layoutX="486.0" layoutY="107.0" mnemonicParsing="false" onAction="#saveRosterFileButtonAction" text="Save Roster File" visible="false" />
+      <Label fx:id="rosterSaveLabel" layoutX="600.0" layoutY="65.0" text="Enter a league name, in the&#10;box to the left,  which&#10;will be used for the roster &#10;file that will save the &#10;league settings.  Then&#10;click the &quot;Save Roster File&quot;&#10;button.&#10; " visible="false">
+         <graphic>
+            <Button fx:id="closeRosterLabelButton" mnemonicParsing="false" onAction="#closeRosterLabelAction" text="X" />
+         </graphic>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.KController">
+   <children>
+      <Group layoutX="-2.0" layoutY="-74.0">
+         <children>
+            <Label layoutX="177.0" layoutY="88.0" text="K" underline="true" />
+            <TableView fx:id="kTableView" layoutX="16.0" layoutY="115.0" prefHeight="600.0" prefWidth="339.0">
+              <columns>
+                <TableColumn fx:id="kPlayerColumn" prefWidth="104.0" text="Player" />
+                <TableColumn fx:id="kNFLTeamColumn" prefWidth="75.0" text="Team" />
+                <TableColumn fx:id="kFantasyPointsColumn" prefWidth="76.0" text="fsy" />
+                <TableColumn fx:id="kDiffColumn" prefWidth="69.0" text="diff" />
+              </columns>
+            </TableView>
+         </children>
+      </Group>
+      <Button fx:id="kDraftButton" layoutX="378.0" layoutY="61.0" mnemonicParsing="false" onAction="#kDraftButtonAction" text="Draft" />
+      <Button fx:id="kStrikeoutButton" layoutX="365.0" layoutY="110.0" mnemonicParsing="false" onAction="#kStrikeoutButtonAction" text="Strikeout" />
+      <Button fx:id="kExamineButton" layoutX="625.0" layoutY="343.0" mnemonicParsing="false" onAction="#kExamineButtonAction" text="Examine" />
+      <TableView fx:id="kExamineTableView" layoutX="365.0" layoutY="382.0" prefHeight="80.0" prefWidth="579.0">
+        <columns>
+          <TableColumn fx:id="kExaminePlayerColumn" prefWidth="75.0" text="player" />
+          <TableColumn fx:id="kExamineYearColumn" prefWidth="75.0" text="year" />
+          <TableColumn fx:id="kExamineGamesColumn" prefWidth="50.0" text="gms" />
+          <TableColumn fx:id="kExamineTacklesColumn" prefWidth="50.0" text="tack" />
+          <TableColumn fx:id="kExamineAssistsColumn" prefWidth="50.0" text="asst" />
+          <TableColumn fx:id="kExamineSacksColumn" prefWidth="50.0" text="sack" />
+          <TableColumn fx:id="kExamineInterceptionsColumn" prefWidth="50.0" text="ints" />
+          <TableColumn fx:id="kExamineFumbleRecoveriesColumn" prefWidth="50.0" text="frs" />
+          <TableColumn fx:id="kExamineTDsColumn" prefWidth="50.0" text="tds" />
+          <TableColumn fx:id="kExamineFantasyPointsColumn" prefWidth="50.0" text="fsy" />
+        </columns>
+      </TableView>
+      <Button fx:id="kExamineButton1" layoutX="625.0" layoutY="502.0" mnemonicParsing="false" onAction="#kExamineButton1Action" text="Examine" />
+      <TableView fx:id="kExamineTableView1" layoutX="365.0" layoutY="541.0" prefHeight="80.0" prefWidth="579.0">
+         <columns>
+          <TableColumn fx:id="kExaminePlayerColumn1" prefWidth="75.0" text="player" />
+          <TableColumn fx:id="kExamineYearColumn1" prefWidth="75.0" text="year" />
+          <TableColumn fx:id="kExamineGamesColumn1" prefWidth="50.0" text="gms" />
+          <TableColumn fx:id="kExamineTacklesColumn1" prefWidth="50.0" text="tack" />
+          <TableColumn fx:id="kExamineAssistsColumn1" prefWidth="50.0" text="asst" />
+          <TableColumn fx:id="kExamineSacksColumn1" prefWidth="50.0" text="sack" />
+          <TableColumn fx:id="kExamineInterceptionsColumn1" prefWidth="50.0" text="ints" />
+          <TableColumn fx:id="kExamineFumbleRecoveriesColumn1" prefWidth="50.0" text="frs" />
+          <TableColumn fx:id="kExamineTDsColumn1" prefWidth="50.0" text="tds" />
+          <TableColumn fx:id="kExamineFantasyPointsColumn1" prefWidth="50.0" text="fsy" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

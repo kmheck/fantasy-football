@@ -1,0 +1,7 @@
+{
+    "configurationFile"                            : "/src/data/configuration_data.txt",
+    "projectionsDirectory"                         : "src/data",
+    "pastStatisticsDirectory"                      : "src/data/previous",
+    "savedDraftPlayerFile"                         : "resources/current_draft_players.ser",
+    "savedDraftRosterFile"                         : "resources/current_draft_roster.ser"
+}

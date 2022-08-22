@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TEController">
+   <children>
+      <Group layoutX="-2.0" layoutY="-74.0">
+         <children>
+            <Label layoutX="185.0" layoutY="92.0" text="TE" underline="true" />
+            <TableView fx:id="teTableView" layoutX="16.0" layoutY="115.0" prefHeight="600.0" prefWidth="353.0">
+              <columns>
+                <TableColumn fx:id="tePlayerColumn" prefWidth="104.0" text="Player" />
+                <TableColumn fx:id="teNFLTeamColumn" prefWidth="75.0" text="Team" />
+                <TableColumn fx:id="teFantasyPointsColumn" prefWidth="76.0" text="fsy" />
+                <TableColumn fx:id="teDiffColumn" prefWidth="69.0" text="diff" />
+              </columns>
+            </TableView>
+         </children>
+      </Group>
+      <Button fx:id="teDraftButton" layoutX="402.0" layoutY="61.0" mnemonicParsing="false" onAction="#teDraftButtonAction" text="Draft" />
+      <Button fx:id="teStrikeoutButton" layoutX="389.0" layoutY="110.0" mnemonicParsing="false" onAction="#teStrikeoutButtonAction" text="Strikeout" />
+      <Button fx:id="teExamineButton" layoutX="624.0" layoutY="340.0" mnemonicParsing="false" onAction="#teExamineButtonAction" text="Examine" />
+      <TableView fx:id="teExamineTableView" layoutX="377.0" layoutY="379.0" prefHeight="80.0" prefWidth="553.0">
+        <columns>
+          <TableColumn fx:id="teExaminePlayerColumn" prefWidth="75.0" text="player" />
+          <TableColumn fx:id="teExamineYearColumn" prefWidth="75.0" text="year" />
+          <TableColumn fx:id="teExamineGamesColumn" prefWidth="50.0" text="gms" />
+          <TableColumn fx:id="teExamineRushYardsColumn" prefWidth="60.0" text="ryds" />
+          <TableColumn fx:id="teExamineRushTDsColumn" prefWidth="40.0" text="rtds" />
+          <TableColumn fx:id="teExamineReceivingYardsColumn" prefWidth="60.0" text="recyds" />
+          <TableColumn fx:id="teExamineReceivingTDsColumn" prefWidth="60.0" text="rectds" />
+          <TableColumn fx:id="teExamineReceptionsColumn" prefWidth="75.0" text="recept" />
+          <TableColumn fx:id="teExamineFantasyPointsColumn" prefWidth="50.0" text="fsy" />
+        </columns>
+      </TableView>
+      <Button fx:id="teExamineButton1" layoutX="624.0" layoutY="500.0" mnemonicParsing="false" onAction="#teExamineButton1Action" text="Examine" />
+      <TableView fx:id="teExamineTableView1" layoutX="377.0" layoutY="538.0" prefHeight="80.0" prefWidth="553.0">
+         <columns>
+            <TableColumn fx:id="teExaminePlayerColumn1" prefWidth="75.0" text="player" />
+            <TableColumn fx:id="teExamineYearColumn1" prefWidth="75.0" text="year" />
+            <TableColumn fx:id="teExamineGamesColumn1" prefWidth="50.0" text="gms" />
+            <TableColumn fx:id="teExamineRushYardsColumn1" prefWidth="60.0" text="ryds" />
+            <TableColumn fx:id="teExamineRushTDsColumn1" prefWidth="40.0" text="rtds" />
+            <TableColumn fx:id="teExamineReceivingYardsColumn1" prefWidth="60.0" text="recyds" />
+            <TableColumn fx:id="teExamineReceivingTDsColumn1" prefWidth="60.0" text="rectds" />
+            <TableColumn fx:id="teExamineReceptionsColumn1" prefWidth="75.0" text="recept" />
+            <TableColumn fx:id="teExamineFantasyPointsColumn1" prefWidth="50.0" text="fsy" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

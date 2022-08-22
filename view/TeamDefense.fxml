@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TeamDefenseController">
+   <children>
+      <Group layoutX="-2.0" layoutY="-74.0">
+         <children>
+            <Label layoutX="152.0" layoutY="88.0" text="Team Defense" underline="true" />
+            <TableView fx:id="teamDefenseTableView" layoutX="16.0" layoutY="115.0" prefHeight="700.0" prefWidth="292.0">
+              <columns>
+                <TableColumn fx:id="teamDefensePlayerColumn" prefWidth="104.0" text="player" />
+                <TableColumn fx:id="teamDefenseFantasyPointsColumn" prefWidth="76.0" text="fsy" />
+                <TableColumn fx:id="teamDefenseDiffColumn" prefWidth="69.0" text="diff" />
+              </columns>
+            </TableView>
+         </children>
+      </Group>
+      <Button fx:id="teamDefenseDraftButton" layoutX="350.0" layoutY="61.0" mnemonicParsing="false" onAction="#teamDefenseDraftButtonAction" text="Draft" />
+      <Button fx:id="teamDefenseStrikeoutButton" layoutX="337.0" layoutY="110.0" mnemonicParsing="false" onAction="#teamDefenseStrikeoutButtonAction" text="Strikeout" />
+      <Button fx:id="teamDefenseExamineButton" layoutX="625.0" layoutY="339.0" mnemonicParsing="false" onAction="#teamDefenseExamineButtonAction" text="Examine" />
+      <TableView fx:id="teamDefenseExamineTableView" layoutX="324.0" layoutY="379.0" prefHeight="80.0" prefWidth="589.0">
+        <columns>
+          <TableColumn fx:id="teamDefenseExaminePlayerColumn" prefWidth="75.0" text="player" />
+          <TableColumn fx:id="teamDefenseExamineYearColumn" prefWidth="75.0" text="year" />
+          <TableColumn fx:id="teamDefenseExamineGamesColumn" prefWidth="50.0" text="gms" />
+          <TableColumn fx:id="teamDefenseExamineSacksColumn" prefWidth="50.0" text="sack" />
+          <TableColumn fx:id="teamDefenseExamineInterceptionsColumn" prefWidth="50.0" text="ints" />
+          <TableColumn fx:id="teamDefenseExamineFumbleRecoveriesColumn" prefWidth="50.0" text="frs" />
+          <TableColumn fx:id="teamDefenseExamineTDsColumn" prefWidth="50.0" text="tds" />
+          <TableColumn fx:id="teamDefenseExaminePointsAllowedColumn" prefWidth="60.0" text="pa" />
+          <TableColumn fx:id="teamDefenseExamineYardsAllowedColumn" prefWidth="70.0" text="ya" />
+          <TableColumn fx:id="teamDefenseExamineFantasyPointsColumn" prefWidth="50.0" text="fsy" />
+        </columns>
+      </TableView>
+      <Button fx:id="teamDefenseExamineButton1" layoutX="625.0" layoutY="498.0" mnemonicParsing="false" onAction="#teamDefenseExamineButton1Action" text="Examine" />
+      <TableView fx:id="teamDefenseExamineTableView1" layoutX="324.0" layoutY="538.0" prefHeight="80.0" prefWidth="589.0">
+         <columns>
+          <TableColumn fx:id="teamDefenseExaminePlayerColumn1" prefWidth="75.0" text="player" />
+          <TableColumn fx:id="teamDefenseExamineYearColumn1" prefWidth="75.0" text="year" />
+          <TableColumn fx:id="teamDefenseExamineGamesColumn1" prefWidth="50.0" text="gms" />
+          <TableColumn fx:id="teamDefenseExamineSacksColumn1" prefWidth="50.0" text="sack" />
+          <TableColumn fx:id="teamDefenseExamineInterceptionsColumn1" prefWidth="50.0" text="ints" />
+          <TableColumn fx:id="teamDefenseExamineFumbleRecoveriesColumn1" prefWidth="50.0" text="frs" />
+          <TableColumn fx:id="teamDefenseExamineTDsColumn1" prefWidth="50.0" text="tds" />
+          <TableColumn fx:id="teamDefenseExaminePointsAllowedColumn1" prefWidth="60.0" text="pa" />
+          <TableColumn fx:id="teamDefenseExamineYardsAllowedColumn1" prefWidth="70.0" text="ya" />
+          <TableColumn fx:id="teamDefenseExamineFantasyPointsColumn1" prefWidth="50.0" text="fsy" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

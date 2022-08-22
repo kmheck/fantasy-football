@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.QBController">
+   <children>
+      <Group layoutX="-2.0" layoutY="-74.0">
+         <children>
+            <Label layoutX="176.0" layoutY="94.0" text="QB" underline="true" />
+            <TableView fx:id="qbTableView" layoutX="16.0" layoutY="115.0" prefHeight="665.0" prefWidth="392.0">
+              <columns>
+                <TableColumn fx:id="qbPlayerColumn" prefWidth="104.0" text="Player" />
+                <TableColumn fx:id="qbNFLTeamColumn" prefWidth="50.0" text="Team" />
+                <TableColumn fx:id="qbFantasyPointsColumn" prefWidth="50.0" text="fsy" />
+                <TableColumn fx:id="qbDiffColumn" prefWidth="50.0" text="diff" />
+                <!--  TableColumn fx:id="qbDraftedColumn" prefWidth="69.0" text="drafted" /-->
+              </columns>
+            </TableView>
+         </children>
+      </Group>
+      <Button fx:id="qbDraftButton" layoutX="431.0" layoutY="62.0" mnemonicParsing="false" onAction="#qbDraftButtonAction" text="Draft" />
+      <Button fx:id="qbStrikeoutButton" layoutX="420.0" layoutY="115.0" mnemonicParsing="false" onAction="#qbStrikeoutButtonAction" text="Strikeout" />
+	  <Button fx:id="qbExamineButton" layoutX="691.0" layoutY="341.0" mnemonicParsing="false" onAction="#qbExamineButtonAction" text="Examine">
+         <tooltip>
+            <Tooltip text="Shows a player's projections and last year's actual statistics" />
+         </tooltip></Button>
+      <TableView fx:id="qbExamineTableView" layoutX="452.0" layoutY="380.0" prefHeight="80.0" prefWidth="537.0">
+        <columns>
+          <TableColumn fx:id="qbExaminePlayerColumn" prefWidth="75.0" text="player" />
+            <TableColumn fx:id="qbExamineYearColumn" prefWidth="75.0" text="year" />
+          <TableColumn fx:id="qbExamineGamesColumn" prefWidth="50.0" text="gms" />
+          <TableColumn fx:id="qbExaminePassYardsColumn" prefWidth="75.0" text="pyds" />
+          <TableColumn fx:id="qbExaminePassTDsColumn" prefWidth="50.0" text="ptds" />
+          <TableColumn fx:id="qbExamineRushYardsColumn" prefWidth="60.0" text="ryds" />
+          <TableColumn fx:id="qbExamineRushTDsColumn" prefWidth="40.0" text="rtds" />
+          <TableColumn fx:id="qbExamineFantasyPointsColumn" prefWidth="50.0" text="fsy" />
+        </columns>
+      </TableView>
+      <Button fx:id="qbExamineButton1" layoutX="691.0" layoutY="502.0" mnemonicParsing="false" onAction="#qbExamineButton1Action" text="Examine" />
+      <TableView fx:id="qbExamineTableView1" layoutX="452.0" layoutY="539.0" prefHeight="80.0" prefWidth="537.0">
+         <columns>
+            <TableColumn fx:id="qbExaminePlayerColumn1" prefWidth="75.0" text="player" />
+            <TableColumn fx:id="qbExamineYearColumn1" prefWidth="75.0" text="year" />
+            <TableColumn fx:id="qbExamineGamesColumn1" prefWidth="50.0" text="gms" />
+            <TableColumn fx:id="qbExaminePassYardsColumn1" prefWidth="75.0" text="pyds" />
+            <TableColumn fx:id="qbExaminePassTDsColumn1" prefWidth="50.0" text="ptds" />
+            <TableColumn fx:id="qbExamineRushYardsColumn1" prefWidth="60.0" text="ryds" />
+            <TableColumn fx:id="qbExamineRushTDsColumn1" prefWidth="40.0" text="rtds" />
+            <TableColumn fx:id="qbExamineFantasyPointsColumn1" prefWidth="50.0" text="fsy" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

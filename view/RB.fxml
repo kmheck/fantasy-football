@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RBController">
+   <children>
+      <Group layoutX="-2.0" layoutY="-74.0">
+         <children>
+            <Label layoutX="224.0" layoutY="92.0" text="RB" underline="true" />
+            <TableView fx:id="rbTableView" layoutX="16.0" layoutY="115.0" prefHeight="600.0" prefWidth="416.0">
+              <columns>
+                <TableColumn fx:id="rbPlayerColumn" prefWidth="104.0" text="Player" />
+                <TableColumn fx:id="rbNFLTeamColumn" prefWidth="75.0" text="Team" />
+                <TableColumn fx:id="rbFantasyPointsColumn" prefWidth="76.0" text="fsy" />
+                <TableColumn fx:id="rbDiffColumn" prefWidth="69.0" text="diff" />
+                <!-- TableColumn fx:id="rbDraftedColumn" prefWidth="69.0" text="drafted" /-->
+              </columns>
+            </TableView>
+         </children>
+      </Group>
+      <Button fx:id="rbDraftButton" layoutX="477.0" layoutY="64.0" mnemonicParsing="false" onAction="#rbDraftButtonAction" text="Draft" />
+      <Button fx:id="rbStrikeoutButton" layoutX="464.0" layoutY="113.0" mnemonicParsing="false" onAction="#rbStrikeoutButtonAction" text="Strikeout" />
+      <Button fx:id="rbExamineButton" layoutX="694.0" layoutY="343.0" mnemonicParsing="false" onAction="#rbExamineButtonAction" text="Examine" />
+      <TableView fx:id="rbExamineTableView" layoutX="452.0" layoutY="382.0" prefHeight="80.0" prefWidth="544.0">
+        <columns>
+          <TableColumn fx:id="rbExaminePlayerColumn" prefWidth="75.0" text="player" />
+          <TableColumn fx:id="rbExamineYearColumn" prefWidth="75.0" text="year" />
+          <TableColumn fx:id="rbExamineGamesColumn" prefWidth="50.0" text="gms" />
+          <TableColumn fx:id="rbExamineRushYardsColumn" prefWidth="60.0" text="ryds" />
+          <TableColumn fx:id="rbExamineRushTDsColumn" prefWidth="40.0" text="rtds" />
+          <TableColumn fx:id="rbExamineReceivingYardsColumn" prefWidth="60.0" text="recyds" />
+          <TableColumn fx:id="rbExamineReceivingTDsColumn" prefWidth="60.0" text="rectds" />
+          <TableColumn fx:id="rbExamineReceptionsColumn" prefWidth="75.0" text="recept" />
+          <TableColumn fx:id="rbExamineFantasyPointsColumn" prefWidth="50.0" text="fsy" />
+        </columns>
+      </TableView>
+      <Button fx:id="rbExamineButton1" layoutX="694.0" layoutY="501.0" mnemonicParsing="false" onAction="#rbExamineButton1Action" text="Examine" />
+      <TableView fx:id="rbExamineTableView1" layoutX="452.0" layoutY="541.0" prefHeight="80.0" prefWidth="544.0">
+         <columns>
+            <TableColumn fx:id="rbExaminePlayerColumn1" prefWidth="75.0" text="player" />
+            <TableColumn fx:id="rbExamineYearColumn1" prefWidth="75.0" text="year" />
+            <TableColumn fx:id="rbExamineGamesColumn1" prefWidth="50.0" text="gms" />
+            <TableColumn fx:id="rbExamineRushYardsColumn1" prefWidth="60.0" text="ryds" />
+            <TableColumn fx:id="rbExamineRushTDsColumn1" prefWidth="40.0" text="rtds" />
+            <TableColumn fx:id="rbExamineReceivingYardsColumn1" prefWidth="60.0" text="recyds" />
+            <TableColumn fx:id="rbExamineReceivingTDsColumn1" prefWidth="60.0" text="rectds" />
+            <TableColumn fx:id="rbExamineReceptionsColumn1" prefWidth="75.0" text="recept" />
+            <TableColumn fx:id="rbExamineFantasyPointsColumn1" prefWidth="50.0" text="fsy" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

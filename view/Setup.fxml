@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="setupTab" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SetupController">
+   <children>
+      <Label layoutX="14.0" layoutY="65.0" text="Selected League" />
+      <TextField fx:id="selectedLeagueTextField" layoutX="126.0" layoutY="61.0" />
+      <MenuBar layoutX="959.0" layoutY="9.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="usageSetupMenuItem" mnemonicParsing="false" onAction="#helpSetupUsageAction" text="Usage" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="yearTextField" layoutX="126.0" layoutY="147.0" prefHeight="21.0" prefWidth="50.0" text="" />
+      <Label fx:id="usageLabel" layoutX="769.0" layoutY="39.0" prefHeight="153.0" prefWidth="248.0" text="To use this application do the following:&#10;1. Create a &quot;roster_&lt;league name&gt;.txt&quot; file&#10;    using roster_template.txt file.&#10;2. Create a &quot;league_scoring_&lt;league name&gt;.txt&quot; file&#10;    using league_scoring_template.txt file.&#10;3. Enter league name&#10;4. Press &quot;Select League&quot; button&#10;5. Go to &quot;Draft&quot; tab and begin drafting!&#10;&#10;Note that the projected scoring for the players&#10;will be based on your custom league settings&#10;and the projection files provided&#10;&#10;" visible="false" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="39.0">
+         <graphic>
+            <Button fx:id="usageCloseButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#usageCloseButtonAction" text="X" visible="false" />
+         </graphic>
+      </Label>
+      <Label layoutX="14.0" layoutY="151.0" text="Year" />
+      <Button fx:id="selectLeagueButton" layoutX="282.0" layoutY="61.0" mnemonicParsing="false" onAction="#selectLeagueButtonAction" text="Select League">
+         <tooltip>
+            <Tooltip text="Enter a league name in&#10;the box to the left.&#10;This name will be used to&#10;find the scoring and roster&#10;settings files" />
+         </tooltip>
+      </Button>
+      <Button layoutX="282.0" layoutY="147.0" mnemonicParsing="false" text="Select Year">
+         <tooltip>
+            <Tooltip text="The year should already&#10;be entered based on the &#10;current data.  If there is a&#10;need to choose a different&#10;year, enter it in the box&#10;at the left and press this&#10;button to save it" />
+         </tooltip>
+      </Button>
+   </children>
+</AnchorPane>

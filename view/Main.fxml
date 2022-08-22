@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <TabPane fx:id="mainTabPane" prefHeight="521.0" prefWidth="596.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+            <Tab text="Setup">
+              <content>
+                <fx:include fx:id="setup" source="Setup.fxml" />
+              </content>
+            </Tab>
+          <Tab text="League Scoring">
+               <content>
+                  <fx:include fx:id="scoring" source="Scoring.fxml" />
+               </content>
+          </Tab>
+          <Tab text="Roster Requirements">
+               <content>
+                  <fx:include fx:id="roster" source="Roster.fxml" />
+               </content>
+          </Tab>
+          <Tab text="Projections File">
+               <content>
+                  <fx:include fx:id="projectionsFile" source="ProjectionsFile.fxml" />
+               </content></Tab>
+          <Tab fx:id="draftTab" text="Draft">
+               <content>
+                  <fx:include fx:id="draft" source="Draft.fxml" />
+               </content>
+          </Tab>
+          <Tab text="Picks">
+              <content>
+                  <fx:include fx:id="picks" source="Picks.fxml" />
+              </content>
+          </Tab>
+          <Tab text="QB">
+             <content>
+                <fx:include fx:id="qb" source="QB.fxml" />
+             </content>
+          </Tab>
+          <Tab text="RB">
+               <content>
+                  <fx:include fx:id="rb" source="RB.fxml" />
+               </content>
+          </Tab>
+          <Tab text="WR">
+               <content>
+                  <fx:include fx:id="wr" source="WR.fxml" />
+               </content>
+          </Tab>
+          <Tab text="TE">
+               <content>
+                  <fx:include fx:id="te" source="TE.fxml" />
+               </content>
+          </Tab>
+          <Tab text="K">
+               <content>
+                  <fx:include fx:id="k" source="K.fxml" />
+               </content>
+          </Tab>
+          <Tab text="Def">
+               <content>
+                  <fx:include fx:id="teamDefense" source="TeamDefense.fxml" />
+               </content>
+          </Tab>
+          <Tab text="IDP">
+              <content>
+                  <fx:include fx:id="idp" source="IDP.fxml" />
+              </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

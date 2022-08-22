@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ScoringController">
+   <children>
+      <Label layoutX="69.0" layoutY="4.0" text="Offensive Scoring" underline="true" />
+      <VBox layoutX="3.0" layoutY="40.0">
+         <children>
+            <Group>
+               <children>
+                  <TextField fx:id="points_per_rushing_yard_text_box" layoutX="202.0" layoutY="40.0" prefHeight="21.0" prefWidth="50.0" text="0.1" />
+                  <Label layoutX="3.0" layoutY="45.0" text="Points per Rushing Yard">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <Label layoutX="3.0" layoutY="75.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Points per Rushing TD">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="points_per_rushing_td_text_box" layoutX="202.0" layoutY="70.0" prefHeight="21.0" prefWidth="50.0" text="6.0" />
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <Label layoutX="5.0" layoutY="106.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Points per Passing Yard" />
+                  <TextField fx:id="points_per_passing_yard_text_box" layoutX="203.0" layoutY="103.0" prefHeight="21.0" prefWidth="50.0" text="0.05" />
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <TextField fx:id="points_per_passing_td_text_box" layoutX="202.0" layoutY="138.0" prefHeight="21.0" prefWidth="50.0" text="3.0" />
+                  <Label layoutX="4.0" layoutY="143.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Points per Passing TD" />
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <Label layoutX="4.0" layoutY="173.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Points per Receiving Yard" />
+                  <TextField id="points_per_receiving_yard_box" fx:id="points_per_receiving_yard_text_box" layoutX="202.0" layoutY="168.0" prefHeight="21.0" prefWidth="50.0" text="0.1" />
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <Label layoutX="4.0" layoutY="204.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Points per Receiving TD" />
+                  <TextField fx:id="points_per_receiving_td_text_box" layoutX="202.0" layoutY="199.0" prefHeight="21.0" prefWidth="50.0" text="6.0" />
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <Label layoutX="3.0" layoutY="276.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Points per  Interception" />
+                  <TextField fx:id="points_per_interception_text_box" layoutX="202.0" layoutY="271.0" prefHeight="21.0" prefWidth="50.0" text="0.0" />
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <Label layoutX="1.0" layoutY="310.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Points per Field Goal" />
+                  <TextField fx:id="points_per_field_goal_text_box" layoutX="199.0" layoutY="305.0" prefHeight="21.0" prefWidth="50.0" text="3.0" />
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <TextField fx:id="points_per_extra_point_text_box" layoutX="202.0" layoutY="359.0" prefHeight="21.0" prefWidth="50.0" text="1.0" />
+                  <Label layoutX="3.0" layoutY="364.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Points per Extra Point" />
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <TextField fx:id="points_per_fumble_text_box" layoutX="207.0" layoutY="345.0" prefHeight="21.0" prefWidth="50.0" text="0.0" />
+                  <Label layoutX="9.0" layoutY="350.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Points per Fumble" />
+               </children>
+            </Group>
+            <Group>
+               <children>
+                  <Label layoutY="298.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Points per Reception" />
+                  <TextField fx:id="points_per_reception_text_box" layoutX="200.0" layoutY="294.0" prefHeight="21.0" prefWidth="50.0" text="0.0" />
+               </children>
+            </Group>
+         </children>
+      </VBox>
+      <Label layoutX="372.0" layoutY="4.0" text="Team Defense Scoring" underline="true" />
+      <VBox layoutX="319.0" layoutY="39.0">
+         <children>
+            <Group layoutX="316.0" layoutY="-1.0">
+               <children>
+                  <TextField fx:id="points_per_sack_text_box" layoutX="202.0" layoutY="40.0" prefHeight="21.0" prefWidth="50.0" text="2.0" />
+                  <Label layoutX="3.0" layoutY="45.0" text="Points per Sack">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Group>
+            <Group layoutX="316.0" layoutY="30.0">
+               <children>
+                  <TextField fx:id="points_per_team_defense_interception_text_box" layoutX="202.0" layoutY="40.0" prefHeight="21.0" prefWidth="50.0" text="2.0" />
+                  <Label layoutX="3.0" layoutY="45.0" text="Points per Interception">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Group>
+            <Group layoutX="316.0" layoutY="61.0">
+               <children>
+                  <TextField fx:id="points_per_team_defense_fumble_recovery_text_box" layoutX="202.0" layoutY="40.0" prefHeight="21.0" prefWidth="50.0" text="2.0" />
+                  <Label layoutX="3.0" layoutY="45.0" text="Points per Fumble Recovery">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Group>
+            <Group layoutX="316.0" layoutY="92.0">
+               <children>
+                  <TextField fx:id="points_per_team_defense_td_text_box" layoutX="202.0" layoutY="40.0" prefHeight="21.0" prefWidth="50.0" text="6.0" />
+                  <Label layoutX="3.0" layoutY="45.0" text="Points per Touchdown">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Group>
+            <Group layoutX="316.0" layoutY="124.0">
+               <children>
+                  <TextField fx:id="team_defense_yards_allowed_cutoff_text_box" layoutX="202.0" layoutY="40.0" prefHeight="21.0" prefWidth="50.0" text="310.0" />
+                  <Label layoutX="3.0" layoutY="45.0" text="Yards Allowed Cutoff">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Group>
+            <Group layoutX="316.0" layoutY="155.0">
+               <children>
+                  <TextField fx:id="team_defense_points_per_yards_allowed_text_box" layoutX="202.0" layoutY="40.0" prefHeight="21.0" prefWidth="50.0" text="0.1" />
+                  <Label layoutX="3.0" layoutY="45.0" text="Points per YA">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Group>
+            <Group layoutX="316.0" layoutY="186.0">
+               <children>
+                  <TextField fx:id="team_defense_points_allowed_cutoff_text_box" layoutX="202.0" layoutY="40.0" prefHeight="21.0" prefWidth="50.0" text="10.0" />
+                  <Label layoutX="3.0" layoutY="45.0" text="Points Allowed Cutoff">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Group>
+            <Group layoutX="316.0" layoutY="217.0">
+               <children>
+                  <TextField fx:id="team_defense_points_per_points_allowed_text_box" layoutX="202.0" layoutY="40.0" prefHeight="21.0" prefWidth="50.0" text="1.0" />
+                  <Label layoutX="3.0" layoutY="45.0" text="Points per PA">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Group>
+         </children>
+      </VBox>
+      <Label layoutX="372.0" layoutY="298.0" text="IDP Scoring" underline="true" />
+      <VBox layoutX="319.0" layoutY="328.0">
+         <children>
+            <Group layoutX="316.0" layoutY="288.0">
+               <children>
+                  <TextField fx:id="points_per_idp_interception_text_box" layoutX="202.0" layoutY="40.0" prefHeight="21.0" prefWidth="50.0" text="2.0" />
+                  <Label layoutX="3.0" layoutY="45.0" text="Points per Interception">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Group>
+            <Group layoutX="316.0" layoutY="319.0">
+               <children>
+                  <TextField fx:id="points_per_idp_td_text_box" layoutX="202.0" layoutY="40.0" prefHeight="21.0" prefWidth="50.0" text="6.0" />
+                  <Label layoutX="3.0" layoutY="45.0" text="Points per Touchdown">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Group>
+            <Group layoutX="316.0" layoutY="350.0">
+               <children>
+                  <TextField fx:id="points_per_idp_fumble_recovery_text_box" layoutX="202.0" layoutY="40.0" prefHeight="21.0" prefWidth="50.0" text="2.0" />
+                  <Label layoutX="3.0" layoutY="44.0" text="Points per Fumble Recovery">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Group>
+            <Group layoutX="316.0" layoutY="381.0">
+               <children>
+                  <TextField fx:id="points_per_idp_sack_text_box" layoutX="202.0" layoutY="40.0" prefHeight="21.0" prefWidth="50.0" text="2.0" />
+                  <Label layoutX="3.0" layoutY="45.0" text="Points per Sack">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Group>
+            <Group layoutX="316.0" layoutY="412.0">
+               <children>
+                  <TextField fx:id="points_per_idp_tackle_text_box" layoutX="202.0" layoutY="40.0" prefHeight="21.0" prefWidth="50.0" text="1.0" />
+                  <Label layoutX="3.0" layoutY="45.0" text="Points per Tackle">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Group>
+            <Group layoutX="316.0" layoutY="443.0">
+               <children>
+                  <TextField fx:id="points_per_idp_assist_text_box" layoutX="202.0" layoutY="40.0" prefHeight="21.0" prefWidth="50.0" text="0.5" />
+                  <Label layoutX="3.0" layoutY="45.0" text="Points per Assist">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Group>
+         </children>
+      </VBox>
+      <Button fx:id="leagueScoringButton" layoutX="87.0" layoutY="477.0" mnemonicParsing="false" onAction="#leagueScoringButtonAction" text="Apply Scoring">
+         <tooltip>
+            <Tooltip text="Applies the league scoring rules shown in the boxes" />
+         </tooltip></Button>
+      <Button fx:id="djcButton" layoutX="120.0" layoutY="384.0" mnemonicParsing="false" onAction="#djcButtonAction" text="DJC" />
+      <Button fx:id="bigDaddyButton" layoutX="99.0" layoutY="430.0" mnemonicParsing="false" onAction="#bigDaddyButtonAction" text="Big Daddy" />
+      <Label layoutX="90.0" layoutY="524.0" text="Selected League" />
+      <TextField fx:id="selectedLeagueTextBox" layoutX="51.0" layoutY="566.0" />
+      <MenuBar layoutX="959.0" layoutY="9.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="usageMenuItem" mnemonicParsing="false" onAction="#helpUsageAction" text="Usage" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="usageLabel" layoutX="769.0" layoutY="39.0" prefHeight="153.0" prefWidth="248.0" text="To use this application do the following:&#10;1. Enter league's scoring parameters&#10;2. Proceed to &quot;Roster Requirements&quot; tab&#10;  a. Enter league roster settings&#10;3. Proceed to &quot;Projections File&quot; tab&#10;  a. Choose a projections file&#10;  b. Choose a past statistics file&#10;4. Go to &quot;Draft&quot; tab and begin drafting!&#10;&#10;" visible="false">
+         <graphic>
+            <Button fx:id="usageCloseButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#usageCloseButtonAction" text="X" visible="false" />
+         </graphic>
+      </Label>
+      <TextField fx:id="yearTextBox" layoutX="700.0" layoutY="36.0" prefHeight="21.0" prefWidth="50.0" text="year" />
+      <Label layoutX="661.0" layoutY="40.0" text="Year" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WRController">
+   <children>
+      <Group layoutX="-2.0" layoutY="-74.0">
+         <children>
+            <Label layoutX="207.0" layoutY="94.0" text="WR" underline="true" />
+            <TableView fx:id="wrTableView" layoutX="16.0" layoutY="115.0" prefHeight="668.0" prefWidth="400.0">
+              <columns>
+                <TableColumn fx:id="wrPlayerColumn" prefWidth="104.0" text="Player" />
+                <TableColumn fx:id="wrNFLTeamColumn" prefWidth="75.0" text="Team" />
+                <TableColumn fx:id="wrFantasyPointsColumn" prefWidth="76.0" text="fsy" />
+                <TableColumn fx:id="wrDiffColumn" prefWidth="69.0" text="diff" />
+              </columns>
+            </TableView>
+         </children>
+      </Group>
+      <Button fx:id="wrDraftButton" layoutX="439.0" layoutY="58.0" mnemonicParsing="false" onAction="#wrDraftButtonAction" text="Draft" />
+      <Button fx:id="wrStrikeoutButton" layoutX="429.0" layoutY="110.0" mnemonicParsing="false" onAction="#wrStrikeoutButtonAction" text="Strikeout" />
+      <Button fx:id="wrExamineButton" layoutX="694.0" layoutY="340.0" mnemonicParsing="false" onAction="#wrExamineButtonAction" text="Examine" />
+      <TableView fx:id="wrExamineTableView" layoutX="460.0" layoutY="379.0" prefHeight="80.0" prefWidth="544.0">
+        <columns>
+          <TableColumn fx:id="wrExaminePlayerColumn" prefWidth="75.0" text="player" />
+          <TableColumn fx:id="wrExamineYearColumn" prefWidth="75.0" text="year" />
+          <TableColumn fx:id="wrExamineGamesColumn" prefWidth="50.0" text="gms" />
+          <TableColumn fx:id="wrExamineRushYardsColumn" prefWidth="60.0" text="ryds" />
+          <TableColumn fx:id="wrExamineRushTDsColumn" prefWidth="40.0" text="rtds" />
+          <TableColumn fx:id="wrExamineReceivingYardsColumn" prefWidth="60.0" text="recyds" />
+          <TableColumn fx:id="wrExamineReceivingTDsColumn" prefWidth="60.0" text="rectds" />
+          <TableColumn fx:id="wrExamineReceptionsColumn" prefWidth="75.0" text="recept" />
+          <TableColumn fx:id="wrExamineFantasyPointsColumn" prefWidth="50.0" text="fsy" />
+        </columns>
+      </TableView>
+      <Button fx:id="wrExamineButton1" layoutX="694.0" layoutY="498.0" mnemonicParsing="false" onAction="#wrExamineButton1Action" text="Examine" />
+      <TableView fx:id="wrExamineTableView1" layoutX="460.0" layoutY="538.0" prefHeight="80.0" prefWidth="544.0">
+         <columns>
+            <TableColumn fx:id="wrExaminePlayerColumn1" prefWidth="75.0" text="player" />
+            <TableColumn fx:id="wrExamineYearColumn1" prefWidth="75.0" text="year" />
+            <TableColumn fx:id="wrExamineGamesColumn1" prefWidth="50.0" text="gms" />
+            <TableColumn fx:id="wrExamineRushYardsColumn1" prefWidth="60.0" text="ryds" />
+            <TableColumn fx:id="wrExamineRushTDsColumn1" prefWidth="40.0" text="rtds" />
+            <TableColumn fx:id="wrExamineReceivingYardsColumn1" prefWidth="60.0" text="recyds" />
+            <TableColumn fx:id="wrExamineReceivingTDsColumn1" prefWidth="60.0" text="rectds" />
+            <TableColumn fx:id="wrExamineReceptionsColumn1" prefWidth="75.0" text="recept" />
+            <TableColumn fx:id="wrExamineFantasyPointsColumn1" prefWidth="50.0" text="fsy" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

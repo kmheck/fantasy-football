@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IDPController">
+   <children>
+      <Group layoutX="-2.0" layoutY="-74.0">
+         <children>
+            <Label layoutX="152.0" layoutY="88.0" text="IDP" underline="true" />
+            <TableView fx:id="idpTableView" layoutX="16.0" layoutY="115.0" prefHeight="706.0" prefWidth="292.0">
+              <columns>
+                <TableColumn fx:id="idpPlayerColumn" prefWidth="104.0" text="player" />
+                <TableColumn fx:id="idpFantasyPointsColumn" prefWidth="76.0" text="fsy" />
+                <TableColumn fx:id="idpDiffColumn" prefWidth="69.0" text="diff" />
+              </columns>
+            </TableView>
+         </children>
+      </Group>
+      <Button fx:id="idpDraftButton" layoutX="350.0" layoutY="61.0" mnemonicParsing="false" onAction="#idpDraftButtonAction" text="Draft" />
+      <Button fx:id="idpStrikeoutButton" layoutX="337.0" layoutY="110.0" mnemonicParsing="false" onAction="#idpStrikeoutButtonAction" text="Strikeout" />
+      <Button fx:id="idpExamineButton" layoutX="575.0" layoutY="341.0" mnemonicParsing="false" onAction="#idpExamineButtonAction" text="Examine" />
+      <TableView fx:id="idpExamineTableView" layoutX="325.0" layoutY="379.0" prefHeight="80.0" prefWidth="560.0">
+        <columns>
+          <TableColumn fx:id="idpExaminePlayerColumn" prefWidth="75.0" text="player" />
+          <TableColumn fx:id="idpExamineYearColumn" prefWidth="75.0" text="year" />
+          <TableColumn fx:id="idpExamineGamesColumn" prefWidth="50.0" text="gms" />
+          <TableColumn fx:id="idpExamineTacklesColumn" prefWidth="50.0" text="tack" />
+          <TableColumn fx:id="idpExamineAssistsColumn" prefWidth="50.0" text="asst" />
+          <TableColumn fx:id="idpExamineSacksColumn" prefWidth="50.0" text="sack" />
+          <TableColumn fx:id="idpExamineInterceptionsColumn" prefWidth="50.0" text="ints" />
+          <TableColumn fx:id="idpExamineFumbleRecoveriesColumn" prefWidth="50.0" text="frs" />
+          <TableColumn fx:id="idpExamineTDsColumn" prefWidth="50.0" text="tds" />
+          <TableColumn fx:id="idpExamineFantasyPointsColumn" prefWidth="50.0" text="fsy" />
+        </columns>
+      </TableView>
+      <Button fx:id="idpExamineButton1" layoutX="575.0" layoutY="499.0" mnemonicParsing="false" onAction="#idpExamineButton1Action" text="Examine" />
+      <TableView fx:id="idpExamineTableView1" layoutX="325.0" layoutY="538.0" prefHeight="80.0" prefWidth="560.0">
+        <columns>
+          <TableColumn fx:id="idpExaminePlayerColumn1" prefWidth="75.0" text="player" />
+          <TableColumn fx:id="idpExamineYearColumn1" prefWidth="75.0" text="year" />
+          <TableColumn fx:id="idpExamineGamesColumn1" prefWidth="50.0" text="gms" />
+          <TableColumn fx:id="idpExamineTacklesColumn1" prefWidth="50.0" text="tack" />
+          <TableColumn fx:id="idpExamineAssistsColumn1" prefWidth="50.0" text="asst" />
+          <TableColumn fx:id="idpExamineSacksColumn1" prefWidth="50.0" text="sack" />
+          <TableColumn fx:id="idpExamineInterceptionsColumn1" prefWidth="50.0" text="ints" />
+          <TableColumn fx:id="idpExamineFumbleRecoveriesColumn1" prefWidth="50.0" text="frs" />
+          <TableColumn fx:id="idpExamineTDsColumn1" prefWidth="50.0" text="tds" />
+          <TableColumn fx:id="idpExamineFantasyPointsColumn1" prefWidth="50.0" text="fsy" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

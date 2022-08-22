@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DraftController">
+   <children>
+      <Group layoutX="5.0" layoutY="-71.0">
+         <children>
+            <Label layoutX="140.0" layoutY="99.0" text="Top Players" underline="true" />
+            <TableView fx:id="topPlayerTableView" editable="true" layoutX="58.0" layoutY="126.0" prefHeight="700.0" prefWidth="275.0">
+              <columns>
+                <TableColumn fx:id="topPlayerNameColumn" prefWidth="75.0" text="player" />
+                <TableColumn fx:id="topPlayerFantasyPointsColumn" prefWidth="75.0" text="fsy" />
+                <TableColumn fx:id="topPlayerDiffColumn" prefWidth="75.0" text="diff" />
+              </columns>
+            </TableView>
+         </children>
+      </Group>
+      <Button fx:id="topPlayerDraftButton" layoutX="361.0" layoutY="172.0" mnemonicParsing="false" onAction="#topPlayerDraftButtonAction" text="Draft">
+         <tooltip>
+            <Tooltip text="Draft a player for your team - player will show up in Picks Tab" />
+         </tooltip></Button>
+      <Button fx:id="topPlayerStrikeoutButton" layoutX="348.0" layoutY="234.0" mnemonicParsing="false" onAction="#topPlayerStrikeoutButtonAction" text="Strikeout">
+         <tooltip>
+            <Tooltip text="Use when another team owner drafts a player and that player is no longer available to be drafted" />
+         </tooltip></Button>
+      <Label layoutX="498.0" layoutY="28.0" text="Pick Count" />
+      <TextField fx:id="pickCountTextField" layoutX="501.0" layoutY="51.0" prefHeight="25.0" prefWidth="51.0" text="0" />
+      <Button fx:id="draftUndoButton" layoutX="357.0" layoutY="299.0" mnemonicParsing="false" onAction="#draftUndoButtonAction" text="Undo">
+         <tooltip>
+            <Tooltip text="Undo the last pick and return player to available players list" />
+         </tooltip></Button>
+      <RadioButton fx:id="draftRelativeDiffRadioButton" layoutX="359.0" layoutY="457.0" mnemonicParsing="false" onAction="#draftRelativeDiffRadioButtonAction" text="Relative Diff" />
+      <Button fx:id="saveDraftButton" layoutX="670.0" layoutY="172.0" mnemonicParsing="false" onAction="#saveDraftButtonAction" text="Save Draft">
+         <tooltip>
+            <Tooltip text="Saves the draft at its current state to a file that can later be used to restart the draft" />
+         </tooltip>
+      </Button>
+      <Button fx:id="restoreDraftButton" layoutX="663.0" layoutY="234.0" mnemonicParsing="false" onAction="#restoreDraftButtonAction" text="Restore Draft">
+         <tooltip>
+            <Tooltip text="Restores the draft from a previously saved draft" />
+         </tooltip>
+      </Button>
+      <Button fx:id="generateTopPlayerFileButton" layoutX="454.0" layoutY="619.0" mnemonicParsing="false" onAction="#generateTopPlayerFileButtonAction" text="Generate Top Player File">
+         <tooltip>
+            <Tooltip fx:id="generateTopPlayerFileToolTip" text="Generates a file with the top 100 players sorted by value" />
+         </tooltip>
+      </Button>
+   </children>
+</AnchorPane>
