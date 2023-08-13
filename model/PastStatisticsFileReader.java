@@ -138,10 +138,12 @@ public class PastStatisticsFileReader extends StatisticsFileReader
               //3:  Rush attempts
               //4:  Rush yards
               //5:  Rush TDs
-              //6:  Receptions
-              //7:  Receiving yards
-              //8:  Receiving TDs
-              //9:  Fumbles
+              //6:  Targets
+              //7:  Receptions
+              //8:  Receiving yards
+              //9:  Receiving TDs
+              //10: FPts
+              //11: FPts/G
               
               processName(items[0], offensivePlayer);
               try
@@ -162,10 +164,9 @@ public class PastStatisticsFileReader extends StatisticsFileReader
               offensiveStats.setGames(Double.valueOf(items[2]));
               offensiveStats.setRushingYards(Double.valueOf(items[4]));
               offensiveStats.setRushingTDs(Double.valueOf(items[5]));
-              offensiveStats.setReceptions(Double.valueOf(items[6]));
-              offensiveStats.setReceivingYards(Double.valueOf(items[7]));
-              offensiveStats.setReceivingTDs(Double.valueOf(items[8]));
-              offensiveStats.setFumbles(Double.valueOf(items[9]));
+              offensiveStats.setReceptions(Double.valueOf(items[7]));
+              offensiveStats.setReceivingYards(Double.valueOf(items[8]));
+              offensiveStats.setReceivingTDs(Double.valueOf(items[9]));
               
               offensiveStats.calculateFantasyPoints(Position.RUNNING_BACK);
               
@@ -216,12 +217,13 @@ public class PastStatisticsFileReader extends StatisticsFileReader
               //0:  First Name Last Name
               //1:  NFL Team
               //2:  Games
-              //3:  Rush attempts
-              //4:  Rush yards
-              //5:  Rush TDs
-              //6:  Receptions
-              //7:  Receiving yards
-              //8:  Receiving TDs
+              //3:  Targets
+              //4:  Receptions
+              //5:  Receiving yards
+              //6:  Receiving TDs
+              //7:  Rush attempts
+              //8:  Rush yards
+              //9:  Rush TDs
               
               processName(items[0], offensivePlayer);
               try
@@ -240,11 +242,11 @@ public class PastStatisticsFileReader extends StatisticsFileReader
               offensiveStats.setDisplayName(offensivePlayer.getDisplayName());
               offensiveStats.setYear(year);
               offensiveStats.setGames(Double.valueOf(items[2]));
-              offensiveStats.setRushingYards(Double.valueOf(items[4]));
-              offensiveStats.setRushingTDs(Double.valueOf(items[5]));
-              offensiveStats.setReceptions(Double.valueOf(items[6]));
-              offensiveStats.setReceivingYards(Double.valueOf(items[7]));
-              offensiveStats.setReceivingTDs(Double.valueOf(items[8]));
+              offensiveStats.setRushingYards(Double.valueOf(items[8]));
+              offensiveStats.setRushingTDs(Double.valueOf(items[9]));
+              offensiveStats.setReceptions(Double.valueOf(items[4]));
+              offensiveStats.setReceivingYards(Double.valueOf(items[5]));
+              offensiveStats.setReceivingTDs(Double.valueOf(items[6]));
               
               offensiveStats.calculateFantasyPoints(Position.WIDE_RECEIVER);
               
@@ -296,9 +298,10 @@ public class PastStatisticsFileReader extends StatisticsFileReader
               //0: First Name Last Name
               //1: NFL Team
               //2: Games
-              //3: Receptions
-              //4: Receiving yards
-              //5: Receiving TDs
+              //3: Targets
+              //4: Receptions
+              //5: Receiving yards
+              //6: Receiving TDs
               
               processName(items[0], offensivePlayer);
               try
@@ -317,9 +320,9 @@ public class PastStatisticsFileReader extends StatisticsFileReader
               offensiveStats.setDisplayName(offensivePlayer.getDisplayName());
               offensiveStats.setYear(year);
               offensiveStats.setGames(Double.valueOf(items[2]));
-              offensiveStats.setReceptions(Double.valueOf(items[3]));
-              offensiveStats.setReceivingYards(Double.valueOf(items[4]));
-              offensiveStats.setReceivingTDs(Double.valueOf(items[5]));
+              offensiveStats.setReceptions(Double.valueOf(items[4]));
+              offensiveStats.setReceivingYards(Double.valueOf(items[5]));
+              offensiveStats.setReceivingTDs(Double.valueOf(items[6]));
               
               offensiveStats.calculateFantasyPoints(Position.TIGHT_END);
               

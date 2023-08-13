@@ -9,7 +9,7 @@ public class TeamDefense extends Player
     private String teamDefenseName;
     private TeamDefenseStats previousYearStats;
     private TeamDefenseStats projectedStats;
-    
+
     public TeamDefenseStats getPreviousYearStats()
     {
         return previousYearStats;
@@ -35,7 +35,7 @@ public class TeamDefense extends Player
         super();
         this.teamDefenseName = this.nflTeam.toString();
     }
-    
+
     public void setTeamDefenseName(NFLTeam nflTeam)
     {
         this.teamDefenseName = nflTeam.toString();
@@ -61,14 +61,14 @@ public class TeamDefense extends Player
 
         //TODO: Handle alternate scoring for yardage allowed/points allowed
         // Excel function looks like:
-        // =16*(310-NORMINV(0.5*NORMDIST(310,ya per game,80,TRUE),ya per game,80))*NORMDIST(310,ya per game,80,TRUE)/10
+        // =17*(310-NORMINV(0.5*NORMDIST(310,ya per game,80,TRUE),ya per game,80))*NORMDIST(310,ya per game,80,TRUE)/10
         // NORMDIST is defined as NORMDIST(x, mu, stddev, cumulative)
         // NORMINV is defined as NORMINV(probability, mean, stddev) and returns the "x" value
         // from NORMDIST that yields the given probability
         double yardsAllowedPerGame;
         try
         {
-            yardsAllowedPerGame = this.getProjections().getCategoryProjection(ScoringCategory.YARDS_ALLOWED)/16.0;
+            yardsAllowedPerGame = this.getProjections().getCategoryProjection(ScoringCategory.YARDS_ALLOWED)/17.0;
         }
         catch (NoSuchFieldException e)
         {
@@ -84,18 +84,18 @@ public class TeamDefense extends Player
 //        System.out.printf("Team Defense - probability of less than 310 yards allowed: %.3f\n", probabilityOfLessThan310YyardsAllowed);
         double valueInMiddleOfLessThan310YardsProbabilityCurve = defenseDistribution.inverseCumulativeProbability(0.5*probabilityOfLessThan310YyardsAllowed);
 //        System.out.printf("Team Defense - yardage allowed value to use: %.0f\n", valueInMiddleOfLessThan310YardsProbabilityCurve);
-        double yardageFantasyPoints = 16.0*(yardsCutoff - valueInMiddleOfLessThan310YardsProbabilityCurve)*probabilityOfLessThan310YyardsAllowed*pointsPerYardsAllowed;
+        double yardageFantasyPoints = 17.0*(yardsCutoff - valueInMiddleOfLessThan310YardsProbabilityCurve)*probabilityOfLessThan310YyardsAllowed*pointsPerYardsAllowed;
 //        System.out.printf("Team Defense - yardageFantasyPoints: %.0f\n", yardageFantasyPoints);
-        
+
         teamDefenseFantasyPoints = teamDefenseFantasyPoints + yardageFantasyPoints;
-        
-        //TODO: Do something similar for points allowed  
+
+        //TODO: Do something similar for points allowed
         // Excel function:
-        // 16*(10-NORMINV(0.5*NORMDIST(10,E2/16,9.5,TRUE),E2/16,9.5))*NORMDIST(10,E2/16,9.5,TRUE)
+        // 17*(10-NORMINV(0.5*NORMDIST(10,E2/16,9.5,TRUE),E2/16,9.5))*NORMDIST(10,E2/16,9.5,TRUE)
         double pointsAllowedPerGame;
         try
         {
-            pointsAllowedPerGame = this.getProjections().getCategoryProjection(ScoringCategory.POINTS_ALLOWED)/16.0;
+            pointsAllowedPerGame = this.getProjections().getCategoryProjection(ScoringCategory.POINTS_ALLOWED)/17.0;
         }
         catch (NoSuchFieldException e)
         {
@@ -112,11 +112,11 @@ public class TeamDefense extends Player
 //        System.out.printf("Team Defense - probability of less than 10 points allowed: %.3f\n", probabilityOfLessThan10PointsAllowed);
         double valueInMiddleOfLessThan10PointsProbabilityCurve = defensePointsDistribution.inverseCumulativeProbability(0.5*probabilityOfLessThan10PointsAllowed);
 //        System.out.printf("Team Defense - points allowed value to use: %.0f\n", valueInMiddleOfLessThan10PointsProbabilityCurve);
-        double pointsFantasyPoints = 16.0*(pointsCutoff - valueInMiddleOfLessThan10PointsProbabilityCurve)*probabilityOfLessThan10PointsAllowed*pointsPerPointsAllowed;
+        double pointsFantasyPoints = 17.0*(pointsCutoff - valueInMiddleOfLessThan10PointsProbabilityCurve)*probabilityOfLessThan10PointsAllowed*pointsPerPointsAllowed;
 //        System.out.printf("Team Defense - pointsFantasyPoints: %.0f\n", pointsFantasyPoints);
-        
+
         teamDefenseFantasyPoints = teamDefenseFantasyPoints + pointsFantasyPoints;
-        
+
         this.fantasyPoints = teamDefenseFantasyPoints;
     }
 
@@ -126,13 +126,13 @@ public class TeamDefense extends Player
     }
 
     @Override
-    public String toString() 
+    public String toString()
     {
         String imageString = "";
-        
+
         imageString = imageString + this.teamDefenseName + "\n";
         imageString = imageString + super.toString();
-        
+
         return imageString;
     }
 

@@ -8,7 +8,7 @@ public class TeamDefenseStats implements Serializable
 {
 
     /**
-     * 
+     *
      */
     private static final long serialVersionUID = 1L;
     private String displayName;
@@ -22,7 +22,7 @@ public class TeamDefenseStats implements Serializable
     private double yardsAllowed;
     private double safeties;
     private double fantasyPoints;
-    
+
     public TeamDefenseStats()
     {
         super();
@@ -100,7 +100,7 @@ public class TeamDefenseStats implements Serializable
 
     public void calculateFantasyPoints()
     {
-        this.fantasyPoints = 16.0/this.games*
+        this.fantasyPoints = 17.0/this.games*
                 (this.sacks*LeagueScoring.Instance().getScoring(Position.TEAM_DEFENSE, ScoringCategory.SACKS) +
                  this.interceptions*LeagueScoring.Instance().getScoring(Position.TEAM_DEFENSE, ScoringCategory.INTERCEPTIONS) +
                  this.fumbleRecoveries*LeagueScoring.Instance().getScoring(Position.TEAM_DEFENSE, ScoringCategory.FUMBLES) +
@@ -115,14 +115,14 @@ public class TeamDefenseStats implements Serializable
 //        System.out.printf("Team Defense - probability of less than 310 yards allowed: %.3f\n", probabilityOfLessThan310YyardsAllowed);
         double valueInMiddleOfLessThan310YardsProbabilityCurve = defenseDistribution.inverseCumulativeProbability(0.5*probabilityOfLessThan310YyardsAllowed);
 //        System.out.printf("Team Defense - yardage allowed value to use: %.0f\n", valueInMiddleOfLessThan310YardsProbabilityCurve);
-        double yardageFantasyPoints = 16.0*(yardsCutoff - valueInMiddleOfLessThan310YardsProbabilityCurve)*probabilityOfLessThan310YyardsAllowed*pointsPerYardsAllowed;
+        double yardageFantasyPoints = 17.0*(yardsCutoff - valueInMiddleOfLessThan310YardsProbabilityCurve)*probabilityOfLessThan310YyardsAllowed*pointsPerYardsAllowed;
 //        System.out.printf("Team Defense - yardageFantasyPoints: %.0f\n", yardageFantasyPoints);
-        
+
         this.fantasyPoints = this.fantasyPoints + yardageFantasyPoints;
-        
-        //TODO: Do something similar for points allowed  
+
+        //TODO: Do something similar for points allowed
         // Excel function:
-        // 16*(10-NORMINV(0.5*NORMDIST(10,E2/16,9.5,TRUE),E2/16,9.5))*NORMDIST(10,E2/16,9.5,TRUE)
+        // 17*(10-NORMINV(0.5*NORMDIST(10,E2/16,9.5,TRUE),E2/16,9.5))*NORMDIST(10,E2/16,9.5,TRUE)
         double pointsAllowedPerGame = this.pointsAllowed/this.games;
         double pointsCutoff = LeagueScoring.Instance().getScoring(Position.TEAM_DEFENSE, ScoringCategory.POINTS_ALLOWED_CUTOFF);
         double pointsPerPointsAllowed = LeagueScoring.Instance().getScoring(Position.TEAM_DEFENSE, ScoringCategory.POINTS_PER_POINTS_ALLOWED);
@@ -133,12 +133,12 @@ public class TeamDefenseStats implements Serializable
 //        System.out.printf("Team Defense - probability of less than 10 points allowed: %.3f\n", probabilityOfLessThan10PointsAllowed);
         double valueInMiddleOfLessThan10PointsProbabilityCurve = defensePointsDistribution.inverseCumulativeProbability(0.5*probabilityOfLessThan10PointsAllowed);
 //        System.out.printf("Team Defense - points allowed value to use: %.0f\n", valueInMiddleOfLessThan10PointsProbabilityCurve);
-        double pointsFantasyPoints = 16.0*(pointsCutoff - valueInMiddleOfLessThan10PointsProbabilityCurve)*probabilityOfLessThan10PointsAllowed*pointsPerPointsAllowed;
+        double pointsFantasyPoints = 17.0*(pointsCutoff - valueInMiddleOfLessThan10PointsProbabilityCurve)*probabilityOfLessThan10PointsAllowed*pointsPerPointsAllowed;
 //        System.out.printf("Team Defense - pointsFantasyPoints: %.0f\n", pointsFantasyPoints);
-        
+
         this.fantasyPoints = this.fantasyPoints + pointsFantasyPoints;
     }
-    
+
     public double getPointsAllowed()
     {
         return pointsAllowed;
@@ -178,6 +178,6 @@ public class TeamDefenseStats implements Serializable
     {
         this.fantasyPoints = fantasyPoints;
     }
-    
-    
+
+
 }

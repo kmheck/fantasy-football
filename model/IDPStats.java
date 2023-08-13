@@ -6,7 +6,7 @@ public class IDPStats implements Serializable
 {
 
     /**
-     * 
+     *
      */
     private static final long serialVersionUID = 1L;
     private String displayName;
@@ -19,7 +19,7 @@ public class IDPStats implements Serializable
     private double fumbleRecoveries;
     private double TDs;
     private double fantasyPoints;
-    
+
     public IDPStats()
     {
         super();
@@ -117,14 +117,14 @@ public class IDPStats implements Serializable
 
     public void calculateFantasyPoints()
     {
-        this.fantasyPoints = 16.0/this.games*
+        this.fantasyPoints = 17.0/this.games*
                 (this.tackles*LeagueScoring.Instance().getScoring(Position.INDIVIDUAL_DEFENSIVE_PLAYER, ScoringCategory.TACKLES) +
                  this.assists*LeagueScoring.Instance().getScoring(Position.INDIVIDUAL_DEFENSIVE_PLAYER, ScoringCategory.ASSISTS) +
                  this.sacks*LeagueScoring.Instance().getScoring(Position.INDIVIDUAL_DEFENSIVE_PLAYER, ScoringCategory.SACKS) +
                  this.interceptions*LeagueScoring.Instance().getScoring(Position.INDIVIDUAL_DEFENSIVE_PLAYER, ScoringCategory.INTERCEPTIONS) +
                  this.fumbleRecoveries*LeagueScoring.Instance().getScoring(Position.INDIVIDUAL_DEFENSIVE_PLAYER, ScoringCategory.FUMBLES) +
                  this.TDs*LeagueScoring.Instance().getScoring(Position.INDIVIDUAL_DEFENSIVE_PLAYER, ScoringCategory.RETURNS_FOR_TD));
-        
+
     }
     public double getFantasyPoints()
     {
@@ -135,7 +135,7 @@ public class IDPStats implements Serializable
     {
         this.fantasyPoints = fantasyPoints;
     }
-    
+
     @Override
     public String toString() {
         return "IDPStats [displayName=" + displayName + ", games="
@@ -145,5 +145,5 @@ public class IDPStats implements Serializable
                 + fumbleRecoveries + ", TDs=" + TDs + "]";
     }
 
-    
+
 }
