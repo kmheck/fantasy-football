@@ -1,0 +1,50 @@
+Foyesade Oluokun	JAC	9	113	67	2.0	4	1	2	1	171.5
+Roquan Smith	BAL	13	99	62	5.0	0	2	1	1	165.0
+Frankie Luvu	CAR	7	95	46	7.5	4	1	1	1	162.0
+Zaire Franklin	IND	11	100	58	4.0	4	1	1	1	159.0
+C.J. Mosley	NYJ	7	102	63	1.0	5	1	1	0	150.5
+Bobby Wagner	SEA	5	85	62	4.5	5	1	1	1	149.0
+Nick Bolton	KC	10	93	70	1.5	3	1	1	0	145.0
+Logan Wilson	CIN	7	93	42	2.5	4	2	1	1	143.0
+Nakobe Dean	PHI	10	87	39	4.5	4	0	3	2	141.5
+Jordyn Brooks	SEA	5	95	63	1.0	5	0	1	1	140.5
+Eric Kendricks	LAC	5	85	55	3.0	5	1	1	1	139.5
+Shaquille Leonard Risk	IND	11	82	51	1.0	7	3	1	0	136.5
+Drue Tranquill	KC	10	82	50	4.0	3	1	1	1	136.0
+Josey Jewell	DEN	9	77	59	3.0	5	1	1	1	133.5
+Jack Campbell	DET	9	77	35	5.0	5	1	3	0	133.5
+Fred Warner	SF	9	83	55	1.5	7	1	1	1	133.5
+Matt Milano	BUF	13	81	38	3.0	10	1	1	1	132.0
+Alex Singleton	DEN	9	89	62	0.0	4	1	1	0	132.0
+Jordan Hicks	MIN	13	83	40	3.0	7	1	1	1	132.0
+De'Vondre Campbell	GB	6	84	42	1.5	3	2	1	1	129.0
+Bobby Okereke	NYG	13	85	51	0.5	5	1	1	1	127.5
+Devin White Risk	TB	5	77	46	4.0	4	0	2	0	126.0
+Isaiah Simmons Upside	ARI	14	69	34	4.5	6	2	1	1	125.0
+Alex Anzalone	DET	9	81	45	1.5	5	1	1	1	124.5
+Dre Greenlaw	SF	9	86	41	0.5	5	1	1	1	123.5
+Patrick Queen	BAL	13	74	35	5.0	0	1	1	1	121.5
+Lavonte David	TB	5	79	41	2.5	4	0	2	1	121.5
+Divine Deablo	LV	13	82	53	0.5	2	0	2	1	120.5
+David Long	MIA	10	75	45	0.5	5	2	1	1	119.5
+Tremaine Edmunds	CHI	13	81	40	2.0	2	1	1	0	119.0
+DeMario Davis	NO	11	55	50	5.5	6	1	1	1	118.0
+Cody Barton	WAS	14	76	47	1.5	4	1	1	0	117.5
+Cole Holcomb	PIT	6	76	45	1.0	4	1	1	1	116.5
+Quay Walker	GB	6	70	48	1.5	6	0	3	0	115.0
+Ernest Jones	LAR	10	73	47	1.0	4	1	1	0	112.5
+Terrel Bernard	BUF	13	67	45	2.0	8	1	0	0	110.5
+Jerome Baker	MIA	10	64	32	4.5	4	1	1	0	110.0
+Pete Werner	NO	11	80	39	1.0	3	0	1	0	109.5
+Quincy Williams	NYJ	7	77	36	2.0	3	0	1	0	109.0
+Nicholas Morrow	PHI	10	77	29	0.5	3	1	1	1	106.5
+Zaven Collins	ARI	14	65	39	2.0	5	1	1	0	105.5
+Anthony Walker Jr.	CLE	5	73	43	1.0	4	0	1	0	105.5
+Ja'Whaun Bentley	NE	11	60	55	2.0	2	1	1	0	105.5
+Willie Gay Jr.	KC	10	59	41	2.5	7	1	1	0	104.5
+Shaq Thompson	CAR	7	65	50	1.0	0	1	1	1	104.0
+T.J. Edwards	CHI	13	73	34	2.0	3	0	1	0	104.0
+Leighton Vander Esch	DAL	7	65	45	1.0	2	0	2	1	101.5
+Cory Littleton	HOU	7	71	35	2.0	5	0	0	0	101.5
+Christian Harris	HOU	7	57	33	2.0	7	2	1	0	101.5
+Devin Lloyd	JAC	9	55	53	0.0	6	2	1	0	100.5
